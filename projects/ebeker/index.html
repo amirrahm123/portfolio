@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ערן בקר – חברת עורכי דין | נזיקין · ביטוח · רשלנות רפואית</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div id="progressBar"></div>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">ערן בקר<span>חברת עורכי דין</span></a>
+      <ul class="nav-links">
+        <li><a href="about.html">אודות</a></li>
+        <li><a href="legal-team.html">הצוות המשפטי</a></li>
+        <li class="has-dropdown">
+          <a href="#areas">תחומי עיסוק</a>
+          <div class="nav-dropdown">
+            <a href="damages.html">נזיקין כללי</a>
+            <a href="medical-malpractice.html">רשלנות רפואית</a>
+            <a href="insurance.html">ביטוח</a>
+            <a href="marine-accidents.html">תאונות ימיות</a>
+            <a href="student-accidents.html">תאונות תלמידים</a>
+            <a href="wills.html">צוואות וירושות</a>
+            <a href="tax-exemption.html">פטור ממס הכנסה</a>
+            <a href="power-of-attorney.html">ייפוי כוח מתמשך</a>
+            <a href="causes-of-death.html">חקירת סיבות מוות</a>
+          </div>
+        </li>
+        <li><a href="#news">חדשות</a></li>
+        <li><a href="#contact">צור קשר</a></li>
+      </ul>
+      <div class="nav-right">
+        <a href="tel:049001056" class="nav-phone-link">04-9001056</a>
+        <a href="#contact" class="nav-cta">ייעוץ חינם</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="תפריט">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="about.html" onclick="closeMob()">אודות</a>
+    <a href="legal-team.html" onclick="closeMob()">הצוות המשפטי</a>
+    <span class="mob-section-title">תחומי עיסוק</span>
+    <a href="damages.html" onclick="closeMob()" class="mob-sub">נזיקין כללי</a>
+    <a href="medical-malpractice.html" onclick="closeMob()" class="mob-sub">רשלנות רפואית</a>
+    <a href="insurance.html" onclick="closeMob()" class="mob-sub">ביטוח</a>
+    <a href="marine-accidents.html" onclick="closeMob()" class="mob-sub">תאונות ימיות</a>
+    <a href="student-accidents.html" onclick="closeMob()" class="mob-sub">תאונות תלמידים</a>
+    <a href="wills.html" onclick="closeMob()" class="mob-sub">צוואות וירושות</a>
+    <a href="tax-exemption.html" onclick="closeMob()" class="mob-sub">פטור ממס הכנסה</a>
+    <a href="power-of-attorney.html" onclick="closeMob()" class="mob-sub">ייפוי כוח מתמשך</a>
+    <a href="causes-of-death.html" onclick="closeMob()" class="mob-sub">חקירת סיבות מוות</a>
+    <a href="#news" onclick="closeMob()">חדשות</a>
+    <a href="#contact" onclick="closeMob()">צור קשר</a>
+    <a href="tel:049001056" onclick="closeMob()">📞 04-9001056</a>
+    <a href="#contact" onclick="closeMob()" class="mob-cta">ייעוץ חינם</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero hero-home" id="home">
+    <div class="hero-inner">
+      <p class="hero-eyebrow">DUNS 100 &nbsp;·&nbsp; BDi CODE &nbsp;·&nbsp; מוביל בישראל מאז 2003</p>
+      <h1>ערן בקר<span class="accent">חברת עורכי דין</span></h1>
+      <p class="hero-sub">נזיקין · ביטוח · רשלנות רפואית · ביטוח לאומי · תאונות דרכים ועוד</p>
+      <p class="hero-tagline">נפגעתם? חליתם? תנו לנו להילחם בנחישות למיצוי כל זכויותיכם!</p>
+      <div class="hero-btns">
+        <a href="#contact" class="btn-teal">קבעו ייעוץ חינם ←</a>
+        <a href="tel:049001056" class="btn-outline-white">📞 04-9001056</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST SECTION -->
+  <section class="trust-section">
+    <div class="trust-section-inner">
+      <div class="trust-header">
+        <p class="section-eyebrow">הכרות ודירוגים</p>
+        <h2>ממשרדי עורכי הדין המובילים בישראל</h2>
+      </div>
+      <div class="trust-cards">
+        <div class="trust-card">
+          <span class="trust-card-icon">🏆</span>
+          <div class="trust-card-name">DUNS 100</div>
+          <div class="trust-card-org">דן אנד ברדסטריט</div>
+          <p class="trust-card-desc">מדורג בין 100 משרדי עורכי הדין המובילים בישראל על פי מדריך הדירוג היוקרתי של D&B — ההכרה הנחשבת ביותר בענף המשפטי.</p>
+        </div>
+        <div class="trust-card">
+          <span class="trust-card-icon">⭐</span>
+          <div class="trust-card-name">BDi CODE</div>
+          <div class="trust-card-org">מדריך הדירוג המשפטי</div>
+          <p class="trust-card-desc">קיבל ציון מצוינות במדריך BDi CODE — המדריך המקיף של משרדי עורכי הדין המובילים בישראל, על בסיס מוניטין, הצלחות ומקצועיות.</p>
+        </div>
+        <div class="trust-card">
+          <span class="trust-card-icon">💎</span>
+          <div class="trust-card-name">משרד בוטיק</div>
+          <div class="trust-card-org">מוביל מאז 2003</div>
+          <p class="trust-card-desc">כמשרד בוטיק מוביל, כל לקוח מקבל ליווי אישי ומקצועי ישירות מעו"ד ערן בקר — ניסיון של מעל 21 שנה בשירות מלקוחותיו.</p>
+        </div>
+      </div>
+      <div class="trust-stats-row">
+        <div class="trust-stat"><span class="ts-num" data-target="21">0</span><div class="ts-label">שנות ניסיון</div></div>
+        <div class="trust-stat"><span class="ts-num" data-target="15">0</span><div class="ts-label">תחומי עיסוק</div></div>
+        <div class="trust-stat"><span class="ts-num" data-target="2">0</span><div class="ts-label">דירוגים לאומיים</div></div>
+        <div class="trust-stat"><span class="ts-num" data-target="200">0</span><div class="ts-label">עורכי דין הרצה בפניהם</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRACTICE AREAS -->
+  <section class="section" id="areas">
+    <div class="container">
+      <div class="areas-intro reveal">
+        <div class="areas-intro-text">
+          <p class="section-eyebrow">תחומי עיסוק</p>
+          <h2 class="section-title">מה אנחנו עושים</h2>
+          <p class="section-sub">כיסוי משפטי מקיף לכל נפגע גוף — אנחנו כאן בכל שלב של הדרך.</p>
+          <div class="teal-rule"></div>
+        </div>
+        <a href="#contact" class="areas-intro-cta">לייעוץ ראשוני חינם ←</a>
+      </div>
+      <div class="areas-grid">
+        <a href="damages.html" class="area-card reveal">
+          <span class="area-icon">⚖️</span>
+          <div class="area-label">נזיקין כללי</div>
+          <div class="area-desc">ייצוג נפגעי גוף בתביעות פיצויים בגין נזקי גוף מכל סוג — עם ניסיון של עשרות שנים.</div>
+          <span class="area-link">למידע נוסף ←</span>
+        </a>
+        <a href="medical-malpractice.html" class="area-card reveal" style="transition-delay:.05s">
+          <span class="area-icon">🩺</span>
+          <div class="area-label">רשלנות רפואית</div>
+          <div class="area-desc">תביעות כנגד בתי חולים ורופאים בגין טיפול רשלני — עם הצלחות בולטות בתיקים מורכבים.</div>
+          <span class="area-link">למידע נוסף ←</span>
+        </a>
+        <a href="insurance.html" class="area-card reveal" style="transition-delay:.1s">
+          <span class="area-icon">🛡️</span>
+          <div class="area-label">ביטוח</div>
+          <div class="area-desc">תביעות מול חברות ביטוח בנושאי נכות, תאונות ואובדן כושר עבודה.</div>
+          <span class="area-link">למידע נוסף ←</span>
+        </a>
+        <a href="damages.html" class="area-card reveal" style="transition-delay:.15s">
+          <span class="area-icon">🏗️</span>
+          <div class="area-label">תאונות עבודה</div>
+          <div class="area-sub">ביטוח לאומי</div>
+          <div class="area-desc">מיצוי זכויות עובדים שנפגעו בתאונת עבודה מול המוסד לביטוח לאומי וגורמים נוספים.</div>
+          <span class="area-link">למידע נוסף ←</span>
+        </a>
+        <a href="damages.html" class="area-card reveal" style="transition-delay:.2s">
+          <span class="area-icon">🚗</span>
+          <div class="area-label">תאונות דרכים</div>
+          <div class="area-desc">מיצוי פיצויים מחברות הביטוח לנפגעי תאונות דרכים — גם בתיקים מורכבים.</div>
+          <span class="area-link">למידע נוסף ←</span>
+        </a>
+        <a href="marine-accidents.html" class="area-card reveal" style="transition-delay:.25s">
+          <span class="area-icon">⚓</span>
+          <div class="area-label">תאונות ימיות</div>
+          <div class="area-desc">מומחיות ייחודית בתביעות נפגעים בים — מדריכים, חובבים, עובדים ימיים ועוד.</div>
+          <span class="area-link">למידע נוסף ←</span>
+        </a>
+        <a href="student-accidents.html" class="area-card reveal" style="transition-delay:.3s">
+          <span class="area-icon">🎒</span>
+          <div class="area-label">תאונות תלמידים</div>
+          <div class="area-desc">ייצוג ילדים ומשפחותיהם שנפגעו בתאונות בבית הספר או בפעילויות חינוכיות.</div>
+          <span class="area-link">למידע נוסף ←</span>
+        </a>
+        <a href="damages.html" class="area-card reveal" style="transition-delay:.35s">
+          <span class="area-icon">🚑</span>
+          <div class="area-label">תאונות קטלניות</div>
+          <div class="area-desc">ייצוג משפחות שכולות ותובעים בתאונות שגרמו לאובדן חיים — בנחישות ובמקצועיות.</div>
+          <span class="area-link">למידע נוסף ←</span>
+        </a>
+        <a href="damages.html" class="area-card reveal" style="transition-delay:.4s">
+          <span class="area-icon">🫁</span>
+          <div class="area-label">מחלות מקצוע</div>
+          <div class="area-sub">ביטוח לאומי</div>
+          <div class="area-desc">הכרה במחלות שנגרמו עקב תנאי עבודה ומיצוי זכויות מהמוסד לביטוח לאומי.</div>
+          <span class="area-link">למידע נוסף ←</span>
+        </a>
+        <a href="tax-exemption.html" class="area-card reveal" style="transition-delay:.45s">
+          <span class="area-icon">💰</span>
+          <div class="area-label">פטור ממס הכנסה</div>
+          <div class="area-desc">קבלת פטור ממס הכנסה על פיצויים ומענקים לנפגעים — חסכון כספי משמעותי.</div>
+          <span class="area-link">למידע נוסף ←</span>
+        </a>
+        <a href="wills.html" class="area-card reveal" style="transition-delay:.5s">
+          <span class="area-icon">📋</span>
+          <div class="area-label">צוואות וירושות</div>
+          <div class="area-desc">עריכת צוואות, ניהול עיזבונות וייצוג בסכסוכי ירושה בצורה מקצועית ורגישה.</div>
+          <span class="area-link">למידע נוסף ←</span>
+        </a>
+        <a href="power-of-attorney.html" class="area-card reveal" style="transition-delay:.55s">
+          <span class="area-icon">📜</span>
+          <div class="area-label">ייפוי כוח מתמשך</div>
+          <div class="area-sub">וצו אפוטרופסות</div>
+          <div class="area-desc">ליווי משפטי מלא בהכנת מסמכים וניהול הליכים בנושאי כשרות משפטית.</div>
+          <span class="area-link">למידע נוסף ←</span>
+        </a>
+        <a href="causes-of-death.html" class="area-card reveal" style="transition-delay:.6s">
+          <span class="area-icon">🔍</span>
+          <div class="area-label">חקירת סיבות מוות</div>
+          <div class="area-desc">ייצוג משפחות בהליכי חקירת סיבות מוות בפני השופט החוקר, בסמכות חוק ייחודי.</div>
+          <span class="area-link">למידע נוסף ←</span>
+        </a>
+        <a href="damages.html" class="area-card reveal" style="transition-delay:.65s">
+          <span class="area-icon">♿</span>
+          <div class="area-label">נכות כללית וניידות</div>
+          <div class="area-sub">ביטוח לאומי</div>
+          <div class="area-desc">ייצוג מול ועדות רפואיות לקביעת נכות ומיצוי קצבאות ניידות.</div>
+          <span class="area-link">למידע נוסף ←</span>
+        </a>
+        <a href="damages.html" class="area-card reveal" style="transition-delay:.7s">
+          <span class="area-icon">🎖️</span>
+          <div class="area-label">נכי צה"ל</div>
+          <div class="area-sub">ומשרד הביטחון</div>
+          <div class="area-desc">ייצוג חיילים ומשוחררים מול משרד הביטחון לקביעת נכות ומיצוי קצבאות.</div>
+          <span class="area-link">למידע נוסף ←</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWS -->
+  <section class="section section-alt" id="news">
+    <div class="container">
+      <div class="reveal">
+        <p class="section-eyebrow">חדשות ועדכונים</p>
+        <h2 class="section-title">הצלחות ופסיקות בולטות</h2>
+        <div class="teal-rule"></div>
+      </div>
+      <div class="news-grid">
+        <div class="news-card reveal">
+          <div class="news-img">🏄</div>
+          <div class="news-body">
+            <p class="news-tag">ביטוח לאומי · תאונות עבודה</p>
+            <h3 class="news-title">מדריך גלישה לקה באירוע מוחי בים — הוכר כנפגע עבודה</h3>
+            <p class="news-text">בית הדין לעבודה קבע כי יש להכיר באירוע מוחי שנגרם למדריך גלישה כתאונת עבודה. ועדה רפואית קבעה נכות רפואית צמיתה בשיעור 64% המזכה אותו בקצבה חודשית.</p>
+            <a href="#" class="news-link">קרא עוד ←</a>
+          </div>
+        </div>
+        <div class="news-card reveal" style="transition-delay:.1s">
+          <div class="news-img">🚲</div>
+          <div class="news-body">
+            <p class="news-tag">פסק דין תקדימי · בית המשפט העליון</p>
+            <h3 class="news-title">אופניים חשמליים אינם רכב מנועי — הלכה חדשה!</h3>
+            <p class="news-text">בית המשפט העליון קיבל את טענותינו וקבע הלכה חדשה: רוכבים שנפגעו מרכב יוכלו לתבוע פיצויים ישירות מחברות הביטוח של הרכב הפוגע. פורסם בישראל היום.</p>
+            <a href="#" class="news-link">קרא עוד ←</a>
+          </div>
+        </div>
+        <div class="news-card reveal" style="transition-delay:.2s">
+          <div class="news-img">🎤</div>
+          <div class="news-body">
+            <p class="news-tag">הרצאה · לשכת עורכי הדין חיפה</p>
+            <h3 class="news-title">עו"ד ערן בקר מרצה בנושא רשלנות רפואית בפני 200 עו"ד</h3>
+            <p class="news-text">עו"ד בקר הרצה בהשתלמות "תביעות נזיקין — רשלנות רפואית בחדרי מיון" בלשכת עורכי הדין בחיפה, בריכוזו כיו"ר פורום נזיקין, ביטוח וביטוח לאומי.</p>
+            <a href="#" class="news-link">קרא עוד ←</a>
+          </div>
+        </div>
+        <div class="news-card reveal" style="transition-delay:.3s">
+          <div class="news-img">💰</div>
+          <div class="news-body">
+            <p class="news-tag">פיצויים · תאונות עבודה</p>
+            <h3 class="news-title">כ-6.5 מיליון ₪ לתושב הצפון שנפגע במהלך עבודתו</h3>
+            <p class="news-text">בית המשפט המחוזי קיבל את דרישתנו לחשוף את כל חומר החקירה שנאסף על ידי אגף הפיקוח על העבודה — בניגוד לעמדת המדינה — ופסק פיצויים חריגים.</p>
+            <a href="#" class="news-link">קרא עוד ←</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials-section" id="testimonials">
+    <div class="testimonials-container">
+      <div class="reveal">
+        <p class="section-eyebrow">מה אומרים עלינו</p>
+        <h2 class="section-title">לקוחות ממליצים</h2>
+        <div class="teal-rule"></div>
+      </div>
+      <div class="testimonials-carousel">
+        <div class="testimonials-track">
+          <div class="testimonial-card">
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-quote">"עו"ד ערן בקר ליווה אותי לאורך כל ההליך המשפטי בתביעת נזיקין מורכבת. המקצועיות, הנחישות והיחס האישי שקיבלתי היו מעל ומעבר. הגענו לתוצאה מעולה שלא חלמתי עליה."</p>
+            <div class="testi-author">
+              <div class="testi-avatar">👤</div>
+              <div><div class="testi-name">ד.ר מנהריה</div><div class="testi-case">תאונת עבודה · פיצוי משמעותי</div></div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-quote">"אחרי שחברת הביטוח דחתה את התביעה שלי, פניתי לעו"ד בקר. תוך מספר חודשים הצליח להפוך את ההחלטה ולהשיג לי את מלוא הפיצויים. ממליצה בחום!"</p>
+            <div class="testi-author">
+              <div class="testi-avatar">👩</div>
+              <div><div class="testi-name">מ.כ מעכו</div><div class="testi-case">דחיית תביעת ביטוח · הופך להצלחה</div></div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-quote">"המשרד הוכיח מקצועיות יוצאת דופן בתיק רשלנות רפואית. הצוות המשפטי היה זמין לכל שאלה, הסביר בסבלנות כל שלב, ובסוף השיגו פיצויים גבוהים שעזרו לי להתאושש."</p>
+            <div class="testi-author">
+              <div class="testi-avatar">👤</div>
+              <div><div class="testi-name">א.ש מקריית שמונה</div><div class="testi-case">רשלנות רפואית · בית חולים</div></div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-quote">"פניתי למשרד לאחר תאונת דרכים קשה. עו"ד בקר לקח את המקרה בשתי ידיים, נלחם בנחישות מול חברת הביטוח, והשיג עבורי פיצוי שאיפשר לי לחזור לשגרה."</p>
+            <div class="testi-author">
+              <div class="testi-avatar">👨</div>
+              <div><div class="testi-name">י.מ מחיפה</div><div class="testi-case">תאונת דרכים · נזק גוף חמור</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-controls">
+        <button class="testi-prev" aria-label="הקודם">→</button>
+        <div class="testi-dots">
+          <span class="testi-dot active"></span>
+          <span class="testi-dot"></span>
+          <span class="testi-dot"></span>
+          <span class="testi-dot"></span>
+        </div>
+        <button class="testi-next" aria-label="הבא">←</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p class="section-eyebrow">אודות הפירמה</p>
+          <h2 class="section-title">מעל 21 שנה של נחישות משפטית</h2>
+          <div class="teal-rule" style="margin-bottom:28px;"></div>
+          <p>ערן בקר חברת עורכי-דין הינו משרד בוטיק מוביל ומוכר שנוסד בשנת 2003, המתמחה במימוש זכויות נפגעי גוף — נזיקין, ביטוח, רשלנות רפואית וביטוח לאומי.</p>
+          <p>המשרד מלווה את לקוחותיו החל משלב בדיקת היתכנות הגשת התביעה, דרך מיצוי ומימוש זכויותיהם, ניהול משא ומתן מקצועי ועיקש, וכלה בייצוג בפני הערכאות המשפטיות.</p>
+          <p>לעו"ד ערן בקר תפקיד משמעותי כמרצה ורכז אקדמי בפיתוח תוכניות הכשרה לעורכי דין, כיו"ר פורום נזיקין, ביטוח וביטוח לאומי ומשנה ליו"ר לשכת עורכי הדין מחוז חיפה.</p>
+          <div class="badges-row">
+            <span class="badge-chip">DUNS 100</span>
+            <span class="badge-chip">BDi CODE</span>
+            <span class="badge-chip">מוביל בישראל</span>
+            <span class="badge-chip">משרד בוטיק</span>
+          </div>
+          <div style="margin-top:28px">
+            <a href="about.html" class="btn-teal">קראו עוד אודות הפירמה ←</a>
+          </div>
+        </div>
+        <div class="about-visual reveal" style="transition-delay:.15s">
+          <div class="big-icon">⚖️</div>
+          <div class="big-text">ערן בקר — חברת עורכי דין</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section section-alt" id="contact">
+    <div class="container">
+      <div class="reveal">
+        <p class="section-eyebrow">דברו איתנו</p>
+        <h2 class="section-title">צרו קשר — הייעוץ הראשון חינם</h2>
+        <p class="section-sub">מלאו את הטופס ונחזור אליכם בהקדם, או התקשרו ישירות.</p>
+        <div class="teal-rule"></div>
+      </div>
+      <div class="contact-wrap">
+        <div class="contact-info-box reveal">
+          <h3>פרטי המשרד</h3>
+          <div class="contact-item">
+            <div class="contact-icon">📍</div>
+            <div class="contact-detail">
+              <span class="clabel">כתובת</span>
+              <span class="cvalue">רח' הרצל 75, נהריה 22446<br />בסמוך לעיריית נהריה</span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">📞</div>
+            <div class="contact-detail">
+              <span class="clabel">טלפון רב קווי</span>
+              <a href="tel:049001056" class="cvalue">04-9001056</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">💬</div>
+            <div class="contact-detail">
+              <span class="clabel">וואטסאפ</span>
+              <a href="https://wa.me/9720522611850" target="_blank" rel="noopener" class="cvalue">052-2611850</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">📠</div>
+            <div class="contact-detail">
+              <span class="clabel">פקס</span>
+              <span class="cvalue">04-9001057</span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">✉️</div>
+            <div class="contact-detail">
+              <span class="clabel">דוא"ל</span>
+              <a href="mailto:office@ebeker.co.il" class="cvalue">office@ebeker.co.il</a>
+            </div>
+          </div>
+          <div class="social-row">
+            <a href="#" class="social-btn" title="Facebook">𝑓</a>
+            <a href="#" class="social-btn" title="YouTube">▶</a>
+            <a href="https://wa.me/9720522611850" class="social-btn" title="WhatsApp" target="_blank" rel="noopener">💬</a>
+          </div>
+        </div>
+        <div class="contact-form-box reveal" style="transition-delay:.15s">
+          <h3>שלחו הודעה</h3>
+          <form id="contactForm" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="fname">שם פרטי</label>
+                <input type="text" id="fname" placeholder="ישראל" required />
+              </div>
+              <div class="form-group">
+                <label for="lname">שם משפחה</label>
+                <input type="text" id="lname" placeholder="ישראלי" required />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="phone">מס' טלפון</label>
+                <input type="tel" id="phone" placeholder="050-0000000" required />
+              </div>
+              <div class="form-group">
+                <label for="email">דוא"ל</label>
+                <input type="email" id="email" placeholder="name@example.com" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="message">ההודעה שלכם</label>
+              <textarea id="message" placeholder="ספרו לנו בקצרה על המקרה שלכם..." required></textarea>
+            </div>
+            <button type="submit" class="form-submit">שלחו הודעה ←</button>
+          </form>
+          <div class="form-success" id="formSuccess">
+            <div class="check">✅</div>
+            <h4>ההודעה התקבלה!</h4>
+            <p>נחזור אליכם בהקדם האפשרי.<br />ניתן גם להתקשר ישירות ל-04-9001056.</p>
+            <button class="form-submit" onclick="document.getElementById('formSuccess').style.display='none';document.getElementById('contactForm').style.display='block';document.getElementById('contactForm').reset();" style="margin-top:18px;">בקשה נוספת ←</button>
+          </div>
+        </div>
+      </div>
+      <div class="map-wrap reveal" style="margin-top:48px; background:#1a2a3a; border-radius:16px; padding:32px; box-shadow:0 4px 24px rgba(0,0,0,.12);">
+        <p style="text-align:center; margin-bottom:6px; font-size:0.85rem; color:#2dd4bf; font-weight:600; letter-spacing:1px;">מיקום המשרד</p>
+        <h3 style="text-align:center; margin-bottom:20px; font-size:1.5rem; color:#fff; font-weight:800;">המשרד שלנו</h3>
+        <div style="width:60px; height:3px; background:#2dd4bf; border-radius:2px; margin:0 auto 24px;"></div>
+        <div class="map-container">
+          <iframe src="https://maps.google.com/maps?q=%D7%94%D7%A8%D7%A6%D7%9C+75+%D7%A0%D7%94%D7%A8%D7%99%D7%94&t=&z=16&ie=UTF8&iwloc=&output=embed" width="100%" height="350" style="border:0; border-radius:12px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <p style="text-align:center; margin-top:16px; color:#94a3b8; font-size:0.95rem;">📍 רח' הרצל 75, נהריה 22446 — בסמוך לעיריית נהריה</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="fl">ערן בקר — חברת עורכי דין</div>
+        <p>רח' הרצל 75, נהריה 22446 | בסמוך לעיריית נהריה<br />מדורג DUNS 100 ו-BDi CODE — ממשרדי עורכי הדין המובילים בישראל.</p>
+      </div>
+      <div class="footer-col">
+        <h4>תחומים</h4>
+        <a href="damages.html">נזיקין כללי</a>
+        <a href="medical-malpractice.html">רשלנות רפואית</a>
+        <a href="insurance.html">ביטוח</a>
+        <a href="marine-accidents.html">תאונות ימיות</a>
+        <a href="student-accidents.html">תאונות תלמידים</a>
+        <a href="wills.html">צוואות וירושות</a>
+        <a href="power-of-attorney.html">ייפוי כוח מתמשך</a>
+      </div>
+      <div class="footer-col">
+        <h4>צור קשר</h4>
+        <a href="tel:049001056">04-9001056</a>
+        <a href="https://wa.me/9720522611850" target="_blank" rel="noopener">052-2611850 (וואטסאפ)</a>
+        <a href="mailto:office@ebeker.co.il">office@ebeker.co.il</a>
+        <p>פקס: 04-9001057</p>
+      </div>
+    </div>
+    <hr class="footer-divider" />
+    <div class="footer-bottom">
+      <p>© 2025 ערן בקר חברת עורכי דין. כל הזכויות שמורות.</p>
+      <p><span>DUNS 100 · BDi CODE</span></p>
+    </div>
+  </footer>
+
+  <!-- STICKY CTA BAR -->
+  <div id="stickyCta">
+    <span class="sticky-text">נפגעתם? הייעוץ הראשון חינם</span>
+    <a href="#contact" class="sticky-btn">קבעו ייעוץ חינם</a>
+    <a href="https://wa.me/9720522611850?text=שלום%2C%20אני%20מעוניין%2Fת%20בייעוץ%20משפטי" target="_blank" rel="noopener" class="sticky-wa">💬 וואטסאפ</a>
+    <button class="sticky-close" onclick="document.getElementById('stickyCta').remove()" aria-label="סגור">✕</button>
+  </div>
+
+  <a href="https://wa.me/9720522611850?text=שלום%2C%20אני%20מעוניין%2Fת%20בייעוץ%20משפטי" target="_blank" rel="noopener" class="wa-float" aria-label="WhatsApp"><svg viewBox="0 0 32 32" width="28" height="28" fill="white"><path d="M16.004 2.667A13.27 13.27 0 002.67 15.923a13.16 13.16 0 001.98 6.96L2.667 29.333l6.627-1.737a13.3 13.3 0 006.71 1.81h.006A13.27 13.27 0 0029.333 16.08 13.27 13.27 0 0016.004 2.667zm0 24.27a11.02 11.02 0 01-5.618-1.54l-.403-.24-4.18 1.097 1.116-4.074-.263-.418a10.97 10.97 0 01-1.686-5.84A11.02 11.02 0 0116.004 4.93 11.02 11.02 0 0127.07 16.08a11.02 11.02 0 01-11.066 10.857zm6.067-8.134c-.333-.167-1.97-.972-2.275-1.083-.306-.111-.528-.167-.75.167s-.861 1.083-1.056 1.306c-.194.222-.389.25-.722.083a9.1 9.1 0 01-2.681-1.655 10.06 10.06 0 01-1.855-2.31c-.194-.333-.021-.514.146-.68.15-.15.333-.389.5-.583.167-.194.222-.333.333-.556.111-.222.056-.417-.028-.583-.083-.167-.75-1.806-1.028-2.472-.27-.65-.546-.562-.75-.573l-.639-.011a1.22 1.22 0 00-.889.417c-.306.333-1.167 1.139-1.167 2.778s1.194 3.222 1.361 3.444c.167.222 2.352 3.592 5.7 5.037.796.344 1.418.55 1.902.703.8.254 1.527.218 2.102.132.641-.096 1.97-.806 2.248-1.583.278-.778.278-1.444.194-1.583-.083-.139-.306-.222-.639-.389z"/></svg></a>
+  <button id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="חזרה למעלה">↑</button>
+
+  <script src="main.js"></script>
+</body>
+</html>

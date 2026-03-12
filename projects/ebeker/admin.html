@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ניהול פניות | ערן בקר</title>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Heebo', sans-serif; background: #0f172a; color: #e2e8f0; min-height: 100vh; }
+
+    /* Login */
+    .login-wrap { display: flex; align-items: center; justify-content: center; min-height: 100vh; padding: 20px; }
+    .login-box { background: #1e293b; border-radius: 16px; padding: 40px; width: 100%; max-width: 400px; text-align: center; border: 1px solid #334155; }
+    .login-box h1 { font-size: 24px; margin-bottom: 8px; color: #2dd4bf; }
+    .login-box p { color: #94a3b8; margin-bottom: 24px; font-size: 14px; }
+    .login-box input { width: 100%; padding: 14px 16px; border: 1px solid #334155; border-radius: 10px; background: #0f172a; color: #e2e8f0; font-size: 16px; font-family: inherit; text-align: center; margin-bottom: 16px; }
+    .login-box input:focus { outline: none; border-color: #2dd4bf; }
+    .login-box button { width: 100%; padding: 14px; border: none; border-radius: 10px; background: #2dd4bf; color: #0f172a; font-size: 16px; font-weight: 700; cursor: pointer; font-family: inherit; }
+    .login-box button:hover { background: #14b8a6; }
+    .login-error { color: #f87171; font-size: 14px; margin-top: 12px; display: none; }
+
+    /* Dashboard */
+    .dashboard { display: none; }
+    .dash-header { background: #1e293b; border-bottom: 1px solid #334155; padding: 16px 24px; display: flex; align-items: center; justify-content: space-between; }
+    .dash-header h1 { font-size: 20px; color: #2dd4bf; }
+    .dash-header .dash-info { display: flex; align-items: center; gap: 16px; }
+    .dash-header .contact-count { background: #2dd4bf; color: #0f172a; padding: 4px 12px; border-radius: 20px; font-weight: 700; font-size: 14px; }
+    .dash-logout { background: none; border: 1px solid #475569; color: #94a3b8; padding: 8px 16px; border-radius: 8px; cursor: pointer; font-family: inherit; font-size: 13px; }
+    .dash-logout:hover { border-color: #f87171; color: #f87171; }
+
+    .dash-body { padding: 24px; max-width: 1200px; margin: 0 auto; }
+    .dash-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 24px; }
+    .stat-card { background: #1e293b; border-radius: 12px; padding: 20px; border: 1px solid #334155; }
+    .stat-card .stat-num { font-size: 32px; font-weight: 800; color: #2dd4bf; }
+    .stat-card .stat-label { color: #94a3b8; font-size: 14px; margin-top: 4px; }
+
+    .contacts-list { display: flex; flex-direction: column; gap: 12px; }
+    .contact-card { background: #1e293b; border-radius: 12px; padding: 20px; border: 1px solid #334155; display: grid; grid-template-columns: 1fr 1fr 1fr auto; gap: 16px; align-items: center; }
+    .contact-card:hover { border-color: #2dd4bf33; }
+    .cc-name { font-weight: 700; font-size: 16px; }
+    .cc-detail { color: #94a3b8; font-size: 13px; margin-top: 4px; }
+    .cc-detail a { color: #2dd4bf; text-decoration: none; }
+    .cc-message { color: #cbd5e1; font-size: 14px; line-height: 1.5; }
+    .cc-date { color: #64748b; font-size: 12px; text-align: left; }
+    .cc-actions { display: flex; gap: 8px; }
+    .cc-btn { padding: 8px 12px; border-radius: 8px; border: none; cursor: pointer; font-family: inherit; font-size: 12px; }
+    .cc-btn-wa { background: #25d366; color: white; }
+    .cc-btn-wa:hover { background: #1da851; }
+    .cc-btn-del { background: none; border: 1px solid #475569; color: #94a3b8; }
+    .cc-btn-del:hover { border-color: #f87171; color: #f87171; }
+
+    .empty-state { text-align: center; padding: 60px 20px; color: #64748b; }
+    .empty-state .empty-icon { font-size: 48px; margin-bottom: 16px; }
+
+    @media (max-width: 768px) {
+      .contact-card { grid-template-columns: 1fr; gap: 8px; }
+      .cc-date { text-align: right; }
+      .dash-header { flex-direction: column; gap: 12px; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Login Screen -->
+  <div class="login-wrap" id="loginScreen">
+    <div class="login-box">
+      <h1>ניהול פניות</h1>
+      <p>ערן בקר — חברת עורכי דין</p>
+      <input type="password" id="adminPass" placeholder="הזינו סיסמה" onkeydown="if(event.key==='Enter')doLogin()" />
+      <button onclick="doLogin()">כניסה</button>
+      <div class="login-error" id="loginError">סיסמה שגויה</div>
+    </div>
+  </div>
+
+  <!-- Dashboard -->
+  <div class="dashboard" id="dashboard">
+    <div class="dash-header">
+      <h1>ניהול פניות — ערן בקר</h1>
+      <div class="dash-info">
+        <span class="contact-count" id="contactCount">0 פניות</span>
+        <button class="dash-logout" onclick="doLogout()">יציאה</button>
+      </div>
+    </div>
+    <div class="dash-body">
+      <div class="dash-stats">
+        <div class="stat-card">
+          <div class="stat-num" id="statTotal">0</div>
+          <div class="stat-label">סה"כ פניות</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num" id="statToday">0</div>
+          <div class="stat-label">היום</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num" id="statWeek">0</div>
+          <div class="stat-label">השבוע</div>
+        </div>
+      </div>
+      <div class="contacts-list" id="contactsList">
+        <div class="empty-state">
+          <div class="empty-icon">📭</div>
+          <p>טוען פניות...</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const API = 'http://localhost:3002';
+
+    async function doLogin() {
+      const pass = document.getElementById('adminPass').value;
+      try {
+        const res = await fetch(`${API}/api/admin/login`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ password: pass })
+        });
+        if (res.ok) {
+          document.getElementById('loginScreen').style.display = 'none';
+          document.getElementById('dashboard').style.display = 'block';
+          loadContacts();
+        } else {
+          document.getElementById('loginError').style.display = 'block';
+        }
+      } catch (err) {
+        document.getElementById('loginError').textContent = 'שגיאת חיבור לשרת';
+        document.getElementById('loginError').style.display = 'block';
+      }
+    }
+
+    function doLogout() {
+      document.getElementById('loginScreen').style.display = 'flex';
+      document.getElementById('dashboard').style.display = 'none';
+      document.getElementById('adminPass').value = '';
+      document.getElementById('loginError').style.display = 'none';
+    }
+
+    async function loadContacts() {
+      try {
+        const res = await fetch(`${API}/api/contacts`);
+        const contacts = await res.json();
+        renderContacts(contacts);
+      } catch (err) {
+        document.getElementById('contactsList').innerHTML = '<div class="empty-state"><div class="empty-icon">⚠️</div><p>שגיאה בטעינת פניות</p></div>';
+      }
+    }
+
+    function renderContacts(contacts) {
+      const list = document.getElementById('contactsList');
+      const now = new Date();
+      const todayStart = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+      const weekStart = new Date(todayStart); weekStart.setDate(weekStart.getDate() - 7);
+
+      const today = contacts.filter(c => new Date(c.createdAt) >= todayStart).length;
+      const week = contacts.filter(c => new Date(c.createdAt) >= weekStart).length;
+
+      document.getElementById('statTotal').textContent = contacts.length;
+      document.getElementById('statToday').textContent = today;
+      document.getElementById('statWeek').textContent = week;
+      document.getElementById('contactCount').textContent = contacts.length + ' פניות';
+
+      if (contacts.length === 0) {
+        list.innerHTML = '<div class="empty-state"><div class="empty-icon">📭</div><p>אין פניות עדיין</p></div>';
+        return;
+      }
+
+      list.innerHTML = contacts.map(c => {
+        const date = new Date(c.createdAt);
+        const dateStr = date.toLocaleDateString('he-IL') + ' ' + date.toLocaleTimeString('he-IL', { hour: '2-digit', minute: '2-digit' });
+        const fullName = `${c.fname || ''} ${c.lname || ''}`.trim();
+        const waText = encodeURIComponent(`שלום ${fullName}, קיבלנו את פנייתך באתר ערן בקר חברת עורכי דין. נשמח לסייע!`);
+        return `
+          <div class="contact-card" id="contact-${c._id}">
+            <div>
+              <div class="cc-name">${fullName}</div>
+              <div class="cc-detail"><a href="tel:${c.phone}">${c.phone}</a></div>
+              ${c.email ? `<div class="cc-detail"><a href="mailto:${c.email}">${c.email}</a></div>` : ''}
+            </div>
+            <div class="cc-message">${c.message || '—'}</div>
+            <div class="cc-date">${dateStr}</div>
+            <div class="cc-actions">
+              <a href="https://wa.me/972${(c.phone || '').replace(/^0/, '').replace(/-/g, '')}?text=${waText}" target="_blank" class="cc-btn cc-btn-wa">💬 וואטסאפ</a>
+              <button class="cc-btn cc-btn-del" onclick="deleteContact('${c._id}')">🗑️</button>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    async function deleteContact(id) {
+      if (!confirm('למחוק פנייה זו?')) return;
+      try {
+        await fetch(`${API}/api/contacts/${id}`, { method: 'DELETE' });
+        document.getElementById('contact-' + id)?.remove();
+        loadContacts();
+      } catch (err) {
+        alert('שגיאה במחיקה');
+      }
+    }
+  </script>
+</body>
+</html>

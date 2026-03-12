@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>תאונות ימיות | ערן בקר – חברת עורכי דין</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="progressBar"></div>
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">ערן בקר<span>חברת עורכי דין</span></a>
+      <ul class="nav-links">
+        <li><a href="about.html">אודות</a></li>
+        <li><a href="legal-team.html">הצוות המשפטי</a></li>
+        <li class="has-dropdown">
+          <a href="index.html#areas">תחומי עיסוק</a>
+          <div class="nav-dropdown">
+            <a href="damages.html">נזיקין כללי</a>
+            <a href="medical-malpractice.html">רשלנות רפואית</a>
+            <a href="insurance.html">ביטוח</a>
+            <a href="marine-accidents.html">תאונות ימיות</a>
+            <a href="student-accidents.html">תאונות תלמידים</a>
+            <a href="wills.html">צוואות וירושות</a>
+            <a href="tax-exemption.html">פטור ממס הכנסה</a>
+            <a href="power-of-attorney.html">ייפוי כוח מתמשך</a>
+            <a href="causes-of-death.html">חקירת סיבות מוות</a>
+          </div>
+        </li>
+        <li><a href="index.html#news">חדשות</a></li>
+        <li><a href="index.html#contact">צור קשר</a></li>
+      </ul>
+      <div class="nav-right">
+        <a href="tel:049001056" class="nav-phone-link">04-9001056</a>
+        <a href="index.html#contact" class="nav-cta">ייעוץ חינם</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="תפריט"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="about.html" onclick="closeMob()">אודות</a>
+    <a href="legal-team.html" onclick="closeMob()">הצוות המשפטי</a>
+    <span class="mob-section-title">תחומי עיסוק</span>
+    <a href="damages.html" onclick="closeMob()" class="mob-sub">נזיקין כללי</a>
+    <a href="medical-malpractice.html" onclick="closeMob()" class="mob-sub">רשלנות רפואית</a>
+    <a href="insurance.html" onclick="closeMob()" class="mob-sub">ביטוח</a>
+    <a href="marine-accidents.html" onclick="closeMob()" class="mob-sub">תאונות ימיות</a>
+    <a href="student-accidents.html" onclick="closeMob()" class="mob-sub">תאונות תלמידים</a>
+    <a href="wills.html" onclick="closeMob()" class="mob-sub">צוואות וירושות</a>
+    <a href="tax-exemption.html" onclick="closeMob()" class="mob-sub">פטור ממס הכנסה</a>
+    <a href="power-of-attorney.html" onclick="closeMob()" class="mob-sub">ייפוי כוח מתמשך</a>
+    <a href="causes-of-death.html" onclick="closeMob()" class="mob-sub">חקירת סיבות מוות</a>
+    <a href="index.html#news" onclick="closeMob()">חדשות</a>
+    <a href="index.html#contact" onclick="closeMob()">צור קשר</a>
+    <a href="tel:049001056" onclick="closeMob()">📞 04-9001056</a>
+    <a href="index.html#contact" onclick="closeMob()" class="mob-cta">ייעוץ חינם</a>
+  </div>
+
+  <div class="breadcrumb">
+    <div class="breadcrumb-inner">
+      <a href="index.html">דף הבית</a><span class="sep">/</span>
+      <a href="index.html#areas">תחומי עיסוק</a><span class="sep">/</span>
+      <span class="current">תאונות ימיות</span>
+    </div>
+  </div>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <p class="hero-eyebrow">תחום עיסוק · התמחות ייחודית</p>
+      <h1>תאונות<span class="accent">ימיות</span></h1>
+      <p class="hero-sub">מומחיות ייחודית בתביעות נפגעים בים ובכנרת — לעו"ד ערן בקר ניסיון של כ-21 שנים בתחום.</p>
+      <div class="hero-btns">
+        <a href="index.html#contact" class="btn-teal">קבעו ייעוץ חינם ←</a>
+        <a href="tel:049001056" class="btn-outline-white">📞 04-9001056</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="content-container">
+
+      <div class="reveal">
+        <h2>תאונות בים ובכנרת</h2>
+        <p>ברחבי הים ו/או הכנרת מתרחשות תאונות חמורות כתוצאה משימוש בכלי שיט ו/או השתתפות בפעילות ספורט ימי. תאונות אלו, אמנם אינן שכיחות כמו תאונות הדרכים, אך לצערנו אכן מתרחשות, גורמות לנכות קשה ולעיתים אף למוות, ודורשות ידע משפטי ייחודי וטיפול מיוחד.</p>
+        <p>לעו"ד ערן בקר ניסיון משפטי של כ-21 שנים בהצלחה בייצוג נפגעים בתאונות ים ובתאונות כלי שיט — תחום הדורש התמחות ספציפית בחקיקה הימית הייחודית.</p>
+      </div>
+
+      <div class="reveal">
+        <h2>סוגי הפגיעות הימיות שאנו מטפלים בהן</h2>
+        <ul>
+          <li>פגיעות מנפילה למים מסירה ממונעת או ג'ט סקי</li>
+          <li>פגיעות בעת גרירה על גלגל (טיוב) מסירה ממונעת או ג'ט סקי</li>
+          <li>פגיעות בסקי מים, ווייק בורד, בננה</li>
+          <li>פגיעות ממנוע הסירה או הג'ט סקי ומהספינה</li>
+          <li>פגיעות בהתנגשות בין כלי שיט</li>
+          <li>תאונות של מדריכי גלישה ופעילות ימית</li>
+          <li>פגיעות עובדים בסביבה ימית</li>
+          <li>תאונות בחוף הים ובמתחמי נופש ימיים</li>
+        </ul>
+      </div>
+
+      <div class="highlight-box reveal">
+        <h3>⚓ חשוב לדעת — חקיקה ייחודית</h3>
+        <p>בתביעות אלו, מעבר לרשלנות כללית לפי דיני הנזיקין, קיימות חובות נוספות מכוח חקיקה ייחודית:</p>
+        <ul style="margin-top:12px; margin-bottom:0">
+          <li><strong>תקנות הספנות (כלי שיט קטנים) 1998</strong></li>
+          <li><strong>תקנות הנמלים (בטיחות בשיט) 1982</strong></li>
+        </ul>
+      </div>
+
+      <div class="reveal">
+        <h2>מיקום התאונה — חשיבות משפטית</h2>
+        <p>מיקום התאונה עשוי להשפיע מהותית על שאלת האחריות. לפי <strong>תקנה 68 לתקנות הנמלים (בטיחות בשיט) 1983</strong>, אסור להפעיל סירה ממונעת במרחק של פחות מ-300 מטר מהחוף.</p>
+        <p>בעת גרירת גלגל (טיוב), סקי מים, בננה, או ווייק בורד על ידי סירה או ג'ט סקי, חובה למנות <strong>"צופה"</strong> שיישאר בכלי השיט בנוסף למפעיל. הפרת חובה זו מהווה רשלנות המבססת תביעה.</p>
+      </div>
+
+      <div class="info-card reveal">
+        <h3>📞 נפגעתם בתאונה ימית? פנו אלינו</h3>
+        <p>ייעוץ ראשוני ללא עלות וללא התחייבות. <a href="tel:049001056" style="color:var(--teal); font-weight:700">04-9001056</a> | <a href="https://wa.me/9720522611850" style="color:var(--teal); font-weight:700" target="_blank" rel="noopener">052-2611850 (וואטסאפ)</a></p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <h2>נפגעתם בתאונה ימית?</h2>
+    <p>ייעוץ ראשוני ללא עלות וללא התחייבות — פנו אלינו היום.</p>
+    <div class="cta-btns">
+      <a href="index.html#contact" class="btn-dark">פנו אלינו עכשיו ←</a>
+      <a href="tel:049001056" class="btn-outline-dark">📞 04-9001056</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="fl">ערן בקר — חברת עורכי דין</div>
+        <p>רח' הרצל 75, נהריה 22446 | בסמוך לעיריית נהריה<br />מדורג DUNS 100 ו-BDi CODE — ממשרדי עורכי הדין המובילים בישראל.</p>
+      </div>
+      <div class="footer-col">
+        <h4>תחומים</h4>
+        <a href="damages.html">נזיקין כללי</a>
+        <a href="medical-malpractice.html">רשלנות רפואית</a>
+        <a href="insurance.html">ביטוח</a>
+        <a href="marine-accidents.html">תאונות ימיות</a>
+        <a href="student-accidents.html">תאונות תלמידים</a>
+        <a href="wills.html">צוואות וירושות</a>
+        <a href="power-of-attorney.html">ייפוי כוח מתמשך</a>
+      </div>
+      <div class="footer-col">
+        <h4>צור קשר</h4>
+        <a href="tel:049001056">04-9001056</a>
+        <a href="https://wa.me/9720522611850" target="_blank" rel="noopener">052-2611850 (וואטסאפ)</a>
+        <a href="mailto:office@ebeker.co.il">office@ebeker.co.il</a>
+        <p>פקס: 04-9001057</p>
+      </div>
+    </div>
+    <hr class="footer-divider" />
+    <div class="footer-bottom">
+      <p>© 2025 ערן בקר חברת עורכי דין. כל הזכויות שמורות.</p>
+      <p><span>DUNS 100 · BDi CODE</span></p>
+    </div>
+  </footer>
+  <a href="https://wa.me/9720522611850?text=שלום%2C%20אני%20מעוניין%2Fת%20בייעוץ%20משפטי" target="_blank" rel="noopener" class="wa-float" aria-label="WhatsApp"><svg viewBox="0 0 32 32" width="28" height="28" fill="white"><path d="M16.004 2.667A13.27 13.27 0 002.67 15.923a13.16 13.16 0 001.98 6.96L2.667 29.333l6.627-1.737a13.3 13.3 0 006.71 1.81h.006A13.27 13.27 0 0029.333 16.08 13.27 13.27 0 0016.004 2.667zm0 24.27a11.02 11.02 0 01-5.618-1.54l-.403-.24-4.18 1.097 1.116-4.074-.263-.418a10.97 10.97 0 01-1.686-5.84A11.02 11.02 0 0116.004 4.93 11.02 11.02 0 0127.07 16.08a11.02 11.02 0 01-11.066 10.857zm6.067-8.134c-.333-.167-1.97-.972-2.275-1.083-.306-.111-.528-.167-.75.167s-.861 1.083-1.056 1.306c-.194.222-.389.25-.722.083a9.1 9.1 0 01-2.681-1.655 10.06 10.06 0 01-1.855-2.31c-.194-.333-.021-.514.146-.68.15-.15.333-.389.5-.583.167-.194.222-.333.333-.556.111-.222.056-.417-.028-.583-.083-.167-.75-1.806-1.028-2.472-.27-.65-.546-.562-.75-.573l-.639-.011a1.22 1.22 0 00-.889.417c-.306.333-1.167 1.139-1.167 2.778s1.194 3.222 1.361 3.444c.167.222 2.352 3.592 5.7 5.037.796.344 1.418.55 1.902.703.8.254 1.527.218 2.102.132.641-.096 1.97-.806 2.248-1.583.278-.778.278-1.444.194-1.583-.083-.139-.306-.222-.639-.389z"/></svg></a>
+  <button id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="חזרה למעלה">↑</button>
+  <script src="main.js"></script>
+</body>
+</html>

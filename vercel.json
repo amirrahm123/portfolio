@@ -1,12 +1,11 @@
 {
-  "framework": "vite",
-  "functions": {
-    "api/index.js": {
-      "includeFiles": "server/**"
-    }
-  },
-  "rewrites": [
-    { "source": "/api/:path*", "destination": "/api" },
-    { "source": "/(.*)", "destination": "/index.html" }
-  ]
+    "framework": "vite",
+    "buildCommand": "vite build",
+    "functions": {
+          "api/index.js": {}
+    },
+    "rewrites": [
+          { "source": "/api/:path*", "destination": "/api" },
+          { "source": "/(.*)", "destination": "/index.html" }
+    ]
 }

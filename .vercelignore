@@ -1,7 +1,5 @@
 node_modules
 video
 public-build
-screenshots
 server/node_modules
-dist
 .git

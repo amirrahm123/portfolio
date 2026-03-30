@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>BuildLab | קישורים</title>
-  <meta name="description" content="BuildLab — בונים אתרים שמביאים לקוחות. צפון הארץ, קוד מותאם, 48 שעות." />
+  <meta name="description" content="BuildLab — בונים אתרים בקוד מותאם. מהירים, מקצועיים, ומביאים לקוחות." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
@@ -27,28 +27,22 @@
     .blob {
       position: fixed;
       border-radius: 50%;
-      filter: blur(80px);
-      opacity: 0.18;
+      filter: blur(90px);
+      opacity: 0.15;
       pointer-events: none;
       z-index: 0;
     }
     .blob-1 {
-      width: 300px; height: 300px;
+      width: 280px; height: 280px;
       background: linear-gradient(135deg, #6c63ff, #a855f7);
-      top: -80px; right: -60px;
+      top: -60px; right: -80px;
       animation: float1 8s ease-in-out infinite;
     }
     .blob-2 {
-      width: 250px; height: 250px;
+      width: 220px; height: 220px;
       background: linear-gradient(135deg, #a855f7, #6c63ff);
-      bottom: -40px; left: -80px;
+      bottom: 60px; left: -60px;
       animation: float2 10s ease-in-out infinite;
-    }
-    .blob-3 {
-      width: 180px; height: 180px;
-      background: linear-gradient(135deg, #6c63ff, #c084fc);
-      top: 50%; left: 60%;
-      animation: float3 12s ease-in-out infinite;
     }
 
     @keyframes float1 {
@@ -59,175 +53,367 @@
       0%, 100% { transform: translate(0, 0) scale(1); }
       50% { transform: translate(40px, -30px) scale(1.15); }
     }
-    @keyframes float3 {
-      0%, 100% { transform: translate(0, 0) scale(1); }
-      50% { transform: translate(-20px, -20px) scale(0.9); }
-    }
 
-    /* Main container */
+    /* Container */
     .container {
       position: relative;
       z-index: 1;
       width: 100%;
       max-width: 420px;
-      padding: 48px 24px 32px;
+      padding: 24px 16px 32px;
       display: flex;
       flex-direction: column;
       align-items: center;
       flex: 1;
-      animation: fadeUp 0.8s ease-out;
+      animation: fadeUp 0.7s ease-out;
     }
 
     @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(24px); }
+      from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
     }
 
-    /* Logo */
-    .logo {
-      font-size: 2.4rem;
-      font-weight: 900;
-      letter-spacing: -0.5px;
-      margin-bottom: 8px;
-      background: linear-gradient(135deg, #1a1560, #6c63ff);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+    /* ── HERO CARD ── */
+    .hero-card {
+      width: 100%;
+      background: linear-gradient(135deg, #2d1b69 0%, #6c63ff 50%, #a855f7 100%);
+      border-radius: 24px;
+      padding: 32px 24px 28px;
+      text-align: center;
+      color: #fff;
+      margin-bottom: 20px;
+      position: relative;
+      overflow: hidden;
     }
-    .logo-symbol {
-      -webkit-text-fill-color: #a855f7;
+    .hero-card::before {
+      content: '';
+      position: absolute;
+      top: -40%; right: -30%;
+      width: 200px; height: 200px;
+      background: rgba(255,255,255,0.06);
+      border-radius: 50%;
+    }
+    .hero-card::after {
+      content: '';
+      position: absolute;
+      bottom: -30%; left: -20%;
+      width: 160px; height: 160px;
+      background: rgba(255,255,255,0.04);
+      border-radius: 50%;
     }
 
-    /* Tagline */
-    .tagline {
-      font-size: 1.1rem;
+    .hero-brand {
+      font-size: 0.8rem;
       font-weight: 600;
-      color: #1a1560;
-      margin-bottom: 6px;
-    }
-    .subtitle {
-      font-size: 0.85rem;
-      font-weight: 500;
-      color: #6b6890;
-      margin-bottom: 40px;
-      letter-spacing: 0.3px;
-    }
-    .subtitle span {
-      margin: 0 6px;
-      opacity: 0.4;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      opacity: 0.7;
+      margin-bottom: 16px;
     }
 
-    /* Buttons */
+    .hero-avatar {
+      width: 72px; height: 72px;
+      background: rgba(255,255,255,0.15);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      margin: 0 auto 14px;
+      border: 2px solid rgba(255,255,255,0.2);
+    }
+
+    .hero-name {
+      font-size: 1.6rem;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+
+    .hero-desc {
+      font-size: 0.9rem;
+      font-weight: 400;
+      opacity: 0.85;
+      line-height: 1.6;
+      margin-bottom: 18px;
+    }
+
+    /* Pill badges */
+    .pills {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .pill {
+      background: rgba(255,255,255,0.15);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 50px;
+      padding: 6px 16px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    /* ── SECTION TITLE ── */
+    .section-title {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #8b86a8;
+      margin-bottom: 14px;
+      text-align: center;
+    }
+
+    /* ── LINK BUTTONS ── */
     .links {
       width: 100%;
       display: flex;
       flex-direction: column;
-      gap: 14px;
-      margin-bottom: 48px;
+      gap: 10px;
+      margin-bottom: 24px;
     }
 
     .link-btn {
       display: flex;
       align-items: center;
-      justify-content: center;
-      gap: 10px;
       width: 100%;
-      padding: 16px 24px;
+      padding: 14px 18px;
       border: none;
       border-radius: 16px;
       font-family: 'Heebo', sans-serif;
-      font-size: 1.05rem;
-      font-weight: 700;
-      color: #fff;
-      background: linear-gradient(135deg, #6c63ff, #a855f7);
       cursor: pointer;
       text-decoration: none;
       transition: transform 0.2s ease, box-shadow 0.2s ease;
-      box-shadow: 0 4px 20px rgba(108, 99, 255, 0.25);
       position: relative;
-      overflow: hidden;
-    }
-    .link-btn::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(135deg, rgba(255,255,255,0.12), transparent);
-      opacity: 0;
-      transition: opacity 0.2s;
     }
     .link-btn:hover {
       transform: translateY(-2px);
-      box-shadow: 0 8px 32px rgba(108, 99, 255, 0.35);
-    }
-    .link-btn:hover::before {
-      opacity: 1;
     }
     .link-btn:active {
       transform: translateY(0);
     }
-    .link-btn .icon {
-      font-size: 1.2rem;
-      flex-shrink: 0;
-    }
 
-    /* WhatsApp button special green tint */
+    /* WhatsApp — primary purple gradient */
     .link-btn.whatsapp {
-      background: linear-gradient(135deg, #25d366, #128c7e);
-      box-shadow: 0 4px 20px rgba(37, 211, 102, 0.25);
+      background: linear-gradient(135deg, #6c63ff, #a855f7);
+      color: #fff;
+      padding: 18px 20px;
+      border-radius: 18px;
+      box-shadow: 0 4px 24px rgba(108, 99, 255, 0.3);
+      justify-content: space-between;
     }
     .link-btn.whatsapp:hover {
-      box-shadow: 0 8px 32px rgba(37, 211, 102, 0.35);
+      box-shadow: 0 8px 32px rgba(108, 99, 255, 0.4);
+    }
+    .link-btn.whatsapp .btn-content {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .link-btn.whatsapp .btn-icon {
+      width: 40px; height: 40px;
+      background: rgba(255,255,255,0.2);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+    }
+    .link-btn.whatsapp .btn-text {
+      font-size: 1rem;
+      font-weight: 700;
+    }
+    .link-btn.whatsapp .btn-sub {
+      font-size: 0.75rem;
+      font-weight: 400;
+      opacity: 0.75;
+    }
+    .link-btn.whatsapp .btn-arrow {
+      font-size: 1.2rem;
+      opacity: 0.6;
     }
 
-    /* Divider dot */
-    .divider {
-      width: 6px; height: 6px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, #6c63ff, #a855f7);
-      margin: 8px auto;
-      opacity: 0.4;
+    /* Secondary buttons — white card style */
+    .link-btn.secondary {
+      background: #fff;
+      color: #1a1560;
+      border: 1px solid rgba(26, 21, 96, 0.06);
+      box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+      justify-content: space-between;
+      flex-direction: row-reverse;
+    }
+    .link-btn.secondary:hover {
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    }
+    .link-btn.secondary .btn-content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+    .link-btn.secondary .btn-text {
+      font-size: 0.95rem;
+      font-weight: 700;
+    }
+    .link-btn.secondary .btn-sub {
+      font-size: 0.75rem;
+      color: #8b86a8;
+      font-weight: 400;
+      direction: ltr;
+      text-align: right;
+    }
+    .link-btn.secondary .btn-icon {
+      width: 42px; height: 42px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      flex-shrink: 0;
+    }
+    .link-btn.secondary .btn-icon.mail {
+      background: linear-gradient(135deg, #fee2e2, #fecaca);
+    }
+    .link-btn.secondary .btn-icon.web {
+      background: linear-gradient(135deg, #d1fae5, #a7f3d0);
+    }
+    .link-btn.secondary .btn-icon.ig {
+      background: linear-gradient(135deg, #e0e7ff, #c7d2fe);
+    }
+    .link-btn.secondary .btn-arrow {
+      display: none;
     }
 
-    /* Footer */
+    /* ── STATS ROW ── */
+    .stats {
+      width: 100%;
+      background: #fff;
+      border-radius: 16px;
+      padding: 18px 12px;
+      display: flex;
+      justify-content: space-around;
+      border: 1px solid rgba(26, 21, 96, 0.06);
+      box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+      margin-bottom: 24px;
+    }
+    .stat {
+      text-align: center;
+      flex: 1;
+    }
+    .stat-icon {
+      font-size: 1.4rem;
+      margin-bottom: 4px;
+    }
+    .stat-value {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: #6c63ff;
+    }
+    .stat-value.green { color: #22c55e; }
+    .stat-value.amber { color: #f59e0b; }
+    .stat-label {
+      font-size: 0.7rem;
+      color: #8b86a8;
+      font-weight: 500;
+    }
+
+    /* ── FOOTER ── */
     .footer {
       position: relative;
       z-index: 1;
-      padding: 20px 24px 28px;
+      padding: 12px 24px 28px;
       text-align: center;
-      font-size: 0.75rem;
+      font-size: 0.72rem;
       font-weight: 500;
-      color: #9995b0;
-      letter-spacing: 0.3px;
+      color: #a09cb5;
     }
   </style>
 </head>
 <body>
-  <!-- Floating blobs -->
   <div class="blob blob-1"></div>
   <div class="blob blob-2"></div>
-  <div class="blob blob-3"></div>
 
   <div class="container">
-    <div class="logo"><span class="logo-symbol">✦</span> BuildLab</div>
-    <div class="tagline">בונים אתרים שמביאים לקוחות</div>
-    <div class="subtitle">צפון הארץ<span>·</span>קוד מותאם<span>·</span>48 שעות</div>
+    <!-- Hero card -->
+    <div class="hero-card">
+      <div class="hero-brand">BUILDLAB ✦</div>
+      <div class="hero-avatar">💻</div>
+      <div class="hero-name">BuildLab</div>
+      <div class="hero-desc">
+        בונים אתרים בקוד מותאם 🖥<br/>
+        מהירים, מקצועיים, ומביאים לקוחות
+      </div>
+      <div class="pills">
+        <div class="pill">⚡ 48 שעות</div>
+        <div class="pill">📍 צפון הארץ</div>
+        <div class="pill">💰 מחיר הוגן</div>
+      </div>
+    </div>
+
+    <!-- Contact section -->
+    <div class="section-title">צרו קשר</div>
 
     <div class="links">
+      <!-- WhatsApp — primary -->
       <a href="https://wa.me/9720527044989" target="_blank" rel="noopener" class="link-btn whatsapp">
-        <span class="icon">💬</span>
-        וואטסאפ
+        <div class="btn-content">
+          <div class="btn-icon">💬</div>
+          <div>
+            <div class="btn-text">כתבו לנו בוואטסאפ</div>
+            <div class="btn-sub">נחזור תוך שעה</div>
+          </div>
+        </div>
+        <div class="btn-arrow">←</div>
       </a>
-      <a href="mailto:webdevig123@gmail.com" class="link-btn">
-        <span class="icon">📩</span>
-        שלח מייל
+
+      <!-- Email -->
+      <a href="mailto:webdevig123@gmail.com" class="link-btn secondary">
+        <div class="btn-icon mail">📩</div>
+        <div class="btn-content">
+          <div class="btn-text">שלח מייל</div>
+          <div class="btn-sub">webdevig123@gmail.com</div>
+        </div>
       </a>
-      <a href="https://buildlab-il.vercel.app" target="_blank" rel="noopener" class="link-btn">
-        <span class="icon">🌐</span>
-        האתר שלנו
+
+      <!-- Website -->
+      <a href="https://buildlab-il.vercel.app" target="_blank" rel="noopener" class="link-btn secondary">
+        <div class="btn-icon web">🌐</div>
+        <div class="btn-content">
+          <div class="btn-text">האתר שלנו</div>
+          <div class="btn-sub">buildlab-il.vercel.app</div>
+        </div>
+      </a>
+
+      <!-- Instagram -->
+      <a href="https://instagram.com/buildlab" target="_blank" rel="noopener" class="link-btn secondary">
+        <div class="btn-icon ig">📸</div>
+        <div class="btn-content">
+          <div class="btn-text">אינסטגרם</div>
+          <div class="btn-sub">@buildlab</div>
+        </div>
       </a>
     </div>
 
-    <div class="divider"></div>
+    <!-- Stats row -->
+    <div class="stats">
+      <div class="stat">
+        <div class="stat-icon">⚡</div>
+        <div class="stat-value amber">48h</div>
+        <div class="stat-label">מסירה</div>
+      </div>
+      <div class="stat">
+        <div class="stat-icon">🚀</div>
+        <div class="stat-value">&lt;1s</div>
+        <div class="stat-label">טעינה</div>
+      </div>
+      <div class="stat">
+        <div class="stat-icon">✅</div>
+        <div class="stat-value green">₪0</div>
+        <div class="stat-label">עלויות נסתרות</div>
+      </div>
+    </div>
   </div>
 
   <div class="footer">© BuildLab 2025</div>
